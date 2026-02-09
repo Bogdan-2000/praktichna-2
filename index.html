@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Звіти з лінійної алгебри</title>
+    <title>Звіти з лінійної алгебри - Варіант 1</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
@@ -11,19 +11,23 @@
         .container { max-width: 900px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         header { text-align: center; border-bottom: 3px solid #0056b3; padding-bottom: 20px; margin-bottom: 30px; }
         h1 { color: #0056b3; margin: 0; }
+        p.subtitle { color: #666; font-size: 1.1em; }
         
         /* Таби */
-        .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; }
-        .tab-btn { padding: 12px 24px; cursor: pointer; background: #e0e0e0; border: none; border-radius: 5px; font-weight: bold; font-size: 16px; transition: 0.3s; }
+        .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 25px; }
+        .tab-btn { padding: 12px 30px; cursor: pointer; background: #e0e0e0; border: none; border-radius: 5px; font-weight: bold; font-size: 16px; transition: 0.3s; }
         .tab-btn:hover { background: #d4d4d4; }
-        .tab-btn.active { background: #0056b3; color: white; }
+        .tab-btn.active { background: #0056b3; color: white; transform: scale(1.05); }
+        
         .tab-content { display: none; }
         .tab-content.active { display: block; animation: fadeEffect 0.5s; }
         
         /* Блоки завдань */
-        .task-block { border: 1px solid #ddd; padding: 20px; margin-bottom: 20px; border-radius: 8px; background: #fafafa; }
-        .task-title { font-weight: bold; color: #d63384; display: block; margin-bottom: 10px; font-size: 1.1em; border-bottom: 1px dashed #ccc; padding-bottom: 5px; }
-        .answer { background-color: #e8f5e9; border-left: 5px solid #4caf50; padding: 10px 15px; margin-top: 15px; font-weight: bold; }
+        .task-block { border: 1px solid #e1e4e8; padding: 20px; margin-bottom: 25px; border-radius: 8px; background: #fafafa; border-left: 5px solid #0056b3; }
+        .task-header { font-weight: bold; color: #d63384; font-size: 1.15em; margin-bottom: 15px; border-bottom: 1px dashed #ccc; padding-bottom: 5px; }
+        .sub-task { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+        .sub-task:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .answer { background-color: #e8f5e9; border-left: 5px solid #4caf50; padding: 10px 15px; margin-top: 10px; font-weight: bold; color: #2e7d32; }
         
         @keyframes fadeEffect { from {opacity: 0;} to {opacity: 1;} }
     </style>
@@ -32,8 +36,8 @@
 
 <div class="container">
     <header>
-        <h1>Практичні роботи з комплексних чисел</h1>
-        <p>Студент: Богдан (Варіант №1)</p>
+        <h1>Звіти з лінійної алгебри</h1>
+        <p class="subtitle">Студент: Соловйов Богдан ІПЗ-24-1/9</p>
     </header>
 
     <div class="tabs">
@@ -42,133 +46,182 @@
     </div>
 
     <div id="pr1" class="tab-content active">
-        <h2 style="text-align: center;">Практична робота №1: Тригонометрична форма</h2>
+        <h2 style="text-align: center; margin-bottom: 30px;">Практична робота №1: Тригонометрична форма</h2>
 
         <div class="task-block">
-            <span class="task-title">1.1. Виконати дії</span>
-            <p><strong>а)</strong> \( (2+3i) + (-4+5i) - (3-i) - (2-6i) \)</p>
-            <p>\( = (2-4-3-2) + i(3+5+1+6) = -7 + 15i \)</p>
-            <div class="answer">Відповідь: \( -7 + 15i \)</div>
-            <hr>
-            <p><strong>б)</strong> \( \frac{(3+7i)(2+i)}{5-2i} \)</p>
-            <p>Чисельник: \( 6 + 3i + 14i + 7i^2 = -1 + 17i \)</p>
-            <p>Ділення: \( \frac{(-1+17i)(5+2i)}{25+4} = \frac{-5-2i+85i-34}{29} = \frac{-39+83i}{29} \)</p>
-            <div class="answer">Відповідь: \( -\frac{39}{29} + \frac{83}{29}i \)</div>
-        </div>
-
-        <div class="task-block">
-            <span class="task-title">1.2. Піднести до степеня</span>
-            <p><strong>а)</strong> \( (2+i)^3 = 2^3 + 3\cdot2^2\cdot i + 3\cdot2\cdot i^2 + i^3 \)</p>
-            <p>\( = 8 + 12i - 6 - i = 2 + 11i \)</p>
-            <div class="answer">Відповідь: \( 2 + 11i \)</div>
-            <hr>
-            <p><strong>б)</strong> \( (1-3i)^5 \)</p>
-            <p>\( (1-3i)^2 = 1 - 6i - 9 = -8 - 6i \)</p>
-            <p>\( (1-3i)^4 = (-8-6i)^2 = 64 + 96i - 36 = 28 + 96i \)</p>
-            <p>\( (28+96i)(1-3i) = 28 - 84i + 96i + 288 = 316 + 12i \)</p>
-            <div class="answer">Відповідь: \( 316 + 12i \)</div>
-        </div>
-
-        <div class="task-block">
-            <span class="task-title">1.3. Записати в тригонометричній формі</span>
-            <p><strong>а)</strong> \( z = -2 + 2i \)</p>
-            <p>\( r = \sqrt{8} = 2\sqrt{2} \), II чверть \( \varphi = \frac{3\pi}{4} \)</p>
-            <div class="answer">Відповідь: \( 2\sqrt{2}(\cos\frac{3\pi}{4} + i\sin\frac{3\pi}{4}) \)</div>
-            <hr>
-            <p><strong>б)</strong> \( z = -1 - \sqrt{3}i \)</p>
-            <p>\( r = \sqrt{1+3} = 2 \), III чверть \( \varphi = -\frac{2\pi}{3} \)</p>
-            <div class="answer">Відповідь: \( 2(\cos(-\frac{2\pi}{3}) + i\sin(-\frac{2\pi}{3})) \)</div>
-        </div>
-
-        <div class="task-block">
-            <span class="task-title">1.4. Множення та ділення (тригонометрична форма)</span>
-            <p><strong>а)</strong> \( z_1 = 0,5(\cos 75^\circ...), z_2 = 6(\cos 35^\circ...) \)</p>
-            <div class="answer">
-                Добуток: \( 3(\cos 110^\circ + i\sin 110^\circ) \)<br>
-                Частка: \( \frac{1}{12}(\cos 40^\circ + i\sin 40^\circ) \)
+            <div class="task-header">Завдання 1.1. Виконати дії</div>
+            <div class="sub-task">
+                <strong>а)</strong> \( (2+3i) + (-4+5i) - (3-i) - (2-6i) \)
+                <br><br>
+                \( = (2-4-3-2) + i(3+5+1+6) = -7 + 15i \)
+                <div class="answer">Відповідь: \( -7 + 15i \)</div>
             </div>
-            <hr>
-            <p><strong>б)</strong> \( z_1 = \sqrt{2}(\cos \frac{\pi}{3}...), z_2 = \sqrt{3}(\cos \frac{\pi}{6}...) \)</p>
-            <div class="answer">
-                Добуток: \( \sqrt{6}(\cos \frac{\pi}{2} + i\sin \frac{\pi}{2}) \)<br>
-                Частка: \( \sqrt{\frac{2}{3}}(\cos \frac{\pi}{6} + i\sin \frac{\pi}{6}) \)
+            <div class="sub-task">
+                <strong>б)</strong> \( \frac{(3+7i)(2+i)}{5-2i} \)
+                <br><br>
+                1. Чисельник: \( (3+7i)(2+i) = 6 + 3i + 14i + 7i^2 = -1 + 17i \)
+                <br>
+                2. Множимо на спряжене \( (5+2i) \):
+                <br>
+                \( \frac{(-1+17i)(5+2i)}{25+4} = \frac{-5-2i+85i-34}{29} = \frac{-39+83i}{29} \)
+                <div class="answer">Відповідь: \( -\frac{39}{29} + \frac{83}{29}i \)</div>
             </div>
         </div>
 
         <div class="task-block">
-            <span class="task-title">1.5. Перевести в алгебраїчну форму</span>
-            <p><strong>а)</strong> \( z = 4(\cos\frac{\pi}{6} + i\sin\frac{\pi}{6}) = 4(\frac{\sqrt{3}}{2} + i\frac{1}{2}) \)</p>
-            <div class="answer">Відповідь: \( 2\sqrt{3} + 2i \)</div>
-            <hr>
-            <p><strong>б)</strong> \( z = \sqrt{2}(\cos\frac{\pi}{4} + i\sin\frac{\pi}{4}) = \sqrt{2}(\frac{\sqrt{2}}{2} + i\frac{\sqrt{2}}{2}) \)</p>
-            <div class="answer">Відповідь: \( 1 + i \)</div>
+            <div class="task-header">Завдання 1.2. Піднести до степеня</div>
+            <div class="sub-task">
+                <strong>а)</strong> \( (2+i)^3 \)
+                <br><br>
+                \( = 2^3 + 3\cdot2^2\cdot i + 3\cdot2\cdot i^2 + i^3 \)
+                <br>
+                \( = 8 + 12i - 6 - i = 2 + 11i \)
+                <div class="answer">Відповідь: \( 2 + 11i \)</div>
+            </div>
+            <div class="sub-task">
+                <strong>б)</strong> \( (1-3i)^5 \)
+                <br><br>
+                \( (1-3i)^2 = 1 - 6i - 9 = -8 - 6i \)
+                <br>
+                \( (1-3i)^4 = (-8-6i)^2 = 64 + 96i - 36 = 28 + 96i \)
+                <br>
+                \( (1-3i)^5 = (28+96i)(1-3i) = 28 - 84i + 96i + 288 = 316 + 12i \)
+                <div class="answer">Відповідь: \( 316 + 12i \)</div>
+            </div>
         </div>
 
         <div class="task-block">
-            <span class="task-title">1.6. Виконати дії</span>
+            <div class="task-header">Завдання 1.3. Записати в тригонометричній формі</div>
+            <div class="sub-task">
+                <strong>а)</strong> \( z = -2 + 2i \)
+                <br>
+                \( r = \sqrt{(-2)^2+2^2} = \sqrt{8} = 2\sqrt{2} \)
+                <br>
+                II чверть \( \implies \varphi = \pi - \frac{\pi}{4} = \frac{3\pi}{4} \)
+                <div class="answer">Відповідь: \( 2\sqrt{2}(\cos\frac{3\pi}{4} + i\sin\frac{3\pi}{4}) \)</div>
+            </div>
+            <div class="sub-task">
+                <strong>б)</strong> \( z = -1 - \sqrt{3}i \)
+                <br>
+                \( r = \sqrt{1+3} = 2 \)
+                <br>
+                III чверть \( \implies \varphi = -\pi + \frac{\pi}{3} = -\frac{2\pi}{3} \)
+                <div class="answer">Відповідь: \( 2(\cos(-\frac{2\pi}{3}) + i\sin(-\frac{2\pi}{3})) \)</div>
+            </div>
+        </div>
+
+        <div class="task-block">
+            <div class="task-header">Завдання 1.4. Дії в тригонометричній формі</div>
+            <div class="sub-task">
+                <strong>а)</strong> \( z_1 = 0,5(\cos 75^\circ...), z_2 = 6(\cos 35^\circ...) \)
+                <div class="answer">
+                    Добуток: \( 3(\cos 110^\circ + i\sin 110^\circ) \)<br>
+                    Частка: \( \frac{1}{12}(\cos 40^\circ + i\sin 40^\circ) \)
+                </div>
+            </div>
+            <div class="sub-task">
+                <strong>б)</strong> \( z_1 = \sqrt{2}(\cos \frac{\pi}{3}...), z_2 = \sqrt{3}(\cos \frac{\pi}{6}...) \)
+                <div class="answer">
+                    Добуток: \( \sqrt{6}(\cos \frac{\pi}{2} + i\sin \frac{\pi}{2}) \)<br>
+                    Частка: \( \sqrt{\frac{2}{3}}(\cos \frac{\pi}{6} + i\sin \frac{\pi}{6}) \)
+                </div>
+            </div>
+        </div>
+
+        <div class="task-block">
+            <div class="task-header">Завдання 1.5. Перевести в алгебраїчну форму</div>
+            <div class="sub-task">
+                <strong>а)</strong> \( z = 4(\cos\frac{\pi}{6} + i\sin\frac{\pi}{6}) \)
+                <br>
+                \( = 4(\frac{\sqrt{3}}{2} + i\frac{1}{2}) = 2\sqrt{3} + 2i \)
+                <div class="answer">Відповідь: \( 2\sqrt{3} + 2i \)</div>
+            </div>
+            <div class="sub-task">
+                <strong>б)</strong> \( z = \sqrt{2}(\cos\frac{\pi}{4} + i\sin\frac{\pi}{4}) \)
+                <br>
+                \( = \sqrt{2}(\frac{\sqrt{2}}{2} + i\frac{\sqrt{2}}{2}) = 1 + i \)
+                <div class="answer">Відповідь: \( 1 + i \)</div>
+            </div>
+        </div>
+
+        <div class="task-block">
+            <div class="task-header">Завдання 1.6. Виконати дії</div>
             <p>Вираз: \( \frac{ (\cos\frac{\pi}{3} + i\sin\frac{\pi}{3}) \cdot 2(\cos\frac{\pi}{6} + i\sin\frac{\pi}{6}) }{ \sqrt{2}(\cos\frac{3\pi}{4} + i\sin\frac{3\pi}{4}) } \)</p>
-            <p>Чисельник: \( 2(\cos(\frac{\pi}{3}+\frac{\pi}{6}) + \dots) = 2(\cos\frac{\pi}{2} + i\sin\frac{\pi}{2}) \)</p>
-            <p>Ділення: \( \frac{2}{\sqrt{2}} (\cos(\frac{\pi}{2} - \frac{3\pi}{4}) + \dots) = \sqrt{2}(\cos(-\frac{\pi}{4}) + i\sin(-\frac{\pi}{4})) \)</p>
+            <p>1. Чисельник: \( 1 \cdot 2 \cdot e^{i(\frac{\pi}{3}+\frac{\pi}{6})} = 2e^{i\frac{\pi}{2}} \)</p>
+            <p>2. Ділення: \( \frac{2}{\sqrt{2}} e^{i(\frac{\pi}{2} - \frac{3\pi}{4})} = \sqrt{2}e^{-i\frac{\pi}{4}} \)</p>
+            <p>Алгебраїчно: \( \sqrt{2}(\frac{\sqrt{2}}{2} - i\frac{\sqrt{2}}{2}) = 1 - i \)</p>
             <div class="answer">Відповідь: \( 1 - i \)</div>
         </div>
 
         <div class="task-block">
-            <span class="task-title">2.1. Виконати дії</span>
-            <p>\( \frac{-1+i}{\sqrt{2}(\cos\frac{\pi}{3} + i\sin\frac{\pi}{3})} \)</p>
-            <p>Чисельник у триг. формі: \( \sqrt{2}(\cos\frac{3\pi}{4} + i\sin\frac{3\pi}{4}) \)</p>
-            <p>Результат кута: \( \frac{3\pi}{4} - \frac{\pi}{3} = \frac{5\pi}{12} \)</p>
+            <div class="task-header">Завдання 2.1. Результат у тригонометричній формі</div>
+            <p>Вираз: \( \frac{-1+i}{\sqrt{2}(\cos\frac{\pi}{3} + i\sin\frac{\pi}{3})} \)</p>
+            <p>1. Чисельник \( -1+i \): \( r=\sqrt{2}, \varphi=\frac{3\pi}{4} \)</p>
+            <p>2. Ділення: \( \frac{\sqrt{2}}{\sqrt{2}} \) кут \( (\frac{3\pi}{4} - \frac{\pi}{3}) = \frac{5\pi}{12} \)</p>
             <div class="answer">Відповідь: \( \cos\frac{5\pi}{12} + i\sin\frac{5\pi}{12} \)</div>
         </div>
 
         <div class="task-block">
-            <span class="task-title">2.2. Корені 5-го степеня з 1</span>
+            <div class="task-header">Завдання 2.2. Знайти корені 5-го степеня з 1</div>
+            <p>Корінь \( \sqrt[5]{1} \). Модуль 1. Кут 0.</p>
+            <p>Формула: \( \cos\frac{2\pi k}{5} + i\sin\frac{2\pi k}{5} \)</p>
             <div class="answer">
-                \( w_0 = 1 \)<br>
-                \( w_1 = \cos\frac{2\pi}{5} + i\sin\frac{2\pi}{5} \)<br>
-                \( w_2 = \cos\frac{4\pi}{5} + i\sin\frac{4\pi}{5} \)<br>
-                \( w_3 = \cos\frac{6\pi}{5} + i\sin\frac{6\pi}{5} \)<br>
-                \( w_4 = \cos\frac{8\pi}{5} + i\sin\frac{8\pi}{5} \)
+                \( k=0 \to 1 \)<br>
+                \( k=1 \to \cos\frac{2\pi}{5} + i\sin\frac{2\pi}{5} \)<br>
+                \( k=2 \to \cos\frac{4\pi}{5} + i\sin\frac{4\pi}{5} \)<br>
+                \( k=3 \to \cos\frac{6\pi}{5} + i\sin\frac{6\pi}{5} \)<br>
+                \( k=4 \to \cos\frac{8\pi}{5} + i\sin\frac{8\pi}{5} \)
             </div>
         </div>
     </div>
 
     <div id="pr2" class="tab-content">
-        <h2 style="text-align: center;">Практична робота №2: Показникова форма</h2>
+        <h2 style="text-align: center; margin-bottom: 30px;">Практична робота №2: Показникова форма</h2>
 
         <div class="task-block">
-            <span class="task-title">1.1. Записати в показниковій формі</span>
-            <p><strong>а)</strong> \( z = -4 + 4i \implies r=4\sqrt{2}, \varphi=\frac{3\pi}{4} \)</p>
-            <div class="answer">Відповідь: \( 4\sqrt{2}e^{i\frac{3\pi}{4}} \)</div>
-            <hr>
-            <p><strong>б)</strong> \( z = -\frac{1}{2} - \frac{\sqrt{3}}{2}i \implies r=1, \varphi=-\frac{2\pi}{3} \)</p>
-            <div class="answer">Відповідь: \( e^{-i\frac{2\pi}{3}} \)</div>
+            <div class="task-header">Завдання 1.1. Записати в показниковій формі</div>
+            <div class="sub-task">
+                <strong>а)</strong> \( z = -4 + 4i \implies r=4\sqrt{2}, \varphi=\frac{3\pi}{4} \)
+                <div class="answer">Відповідь: \( 4\sqrt{2}e^{i\frac{3\pi}{4}} \)</div>
+            </div>
+            <div class="sub-task">
+                <strong>б)</strong> \( z = -\frac{1}{2} - \frac{\sqrt{3}}{2}i \implies r=1, \varphi=-\frac{2\pi}{3} \)
+                <div class="answer">Відповідь: \( e^{-i\frac{2\pi}{3}} \)</div>
+            </div>
         </div>
 
         <div class="task-block">
-            <span class="task-title">1.2. Множення та ділення</span>
-            <p><strong>а)</strong> \( z_1=0.5e^{i75^\circ}, z_2=6e^{i35^\circ} \)</p>
-            <div class="answer">Добуток: \( 3e^{i110^\circ} \); Частка: \( \frac{1}{12}e^{i40^\circ} \)</div>
-            <hr>
-            <p><strong>б)</strong> \( z_1=\sqrt{2}e^{i\pi/3}, z_2=\sqrt{3}e^{i\pi/6} \)</p>
-            <div class="answer">Добуток: \( \sqrt{6}e^{i\pi/2} \); Частка: \( \sqrt{\frac{2}{3}}e^{i\pi/6} \)</div>
+            <div class="task-header">Завдання 1.2. Множення та ділення</div>
+            <div class="sub-task">
+                <strong>а)</strong> \( z_1=0.5e^{i75^\circ}, z_2=6e^{i35^\circ} \)
+                <div class="answer">Добуток: \( 3e^{i110^\circ} \); Частка: \( \frac{1}{12}e^{i40^\circ} \)</div>
+            </div>
+            <div class="sub-task">
+                <strong>б)</strong> \( z_1=\sqrt{2}e^{i\pi/3}, z_2=\sqrt{3}e^{i\pi/6} \)
+                <div class="answer">Добуток: \( \sqrt{6}e^{i\pi/2} \); Частка: \( \sqrt{\frac{2}{3}}e^{i\pi/6} \)</div>
+            </div>
         </div>
 
         <div class="task-block">
-            <span class="task-title">1.3. В алгебраїчну форму</span>
-            <p><strong>а)</strong> \( 4e^{i\pi/4} = 4(\frac{\sqrt{2}}{2} + i\frac{\sqrt{2}}{2}) = 2\sqrt{2} + 2\sqrt{2}i \)</p>
-            <hr>
-            <p><strong>б)</strong> \( \sqrt{2}e^{i\pi/4} = \sqrt{2}(\frac{\sqrt{2}}{2} + i\frac{\sqrt{2}}{2}) = 1 + i \)</p>
-            <div class="answer">Відповіді: а) \( 2\sqrt{2}(1+i) \); б) \( 1+i \)</div>
+            <div class="task-header">Завдання 1.3. В алгебраїчну форму</div>
+            <div class="sub-task">
+                <strong>а)</strong> \( 4e^{i\pi/4} = 4(\frac{\sqrt{2}}{2} + i\frac{\sqrt{2}}{2}) \)
+                <div class="answer">Відповідь: \( 2\sqrt{2} + 2\sqrt{2}i \)</div>
+            </div>
+            <div class="sub-task">
+                <strong>б)</strong> \( \sqrt{2}e^{i\pi/4} = \sqrt{2}(\frac{\sqrt{2}}{2} + i\frac{\sqrt{2}}{2}) \)
+                <div class="answer">Відповідь: \( 1 + i \)</div>
+            </div>
         </div>
 
         <div class="task-block">
-            <span class="task-title">2.1. Виконати дії</span>
+            <div class="task-header">Завдання 2.1. Виконати дії</div>
             <p>\( \frac{3e^{i2\pi/3} \cdot \sqrt{3}e^{-i\pi/6}}{\sqrt[3]{27}e^{i2\pi}} = \frac{3\sqrt{3}e^{i\pi/2}}{3} \)</p>
             <div class="answer">Відповідь: \( \sqrt{3}e^{i\frac{\pi}{2}} \)</div>
         </div>
 
         <div class="task-block">
-            <span class="task-title">2.2. Повна форма запису</span>
+            <div class="task-header">Завдання 2.2. Повна форма запису</div>
             <p>\( z = \sqrt{2}e^{-i\pi/3} \)</p>
             <div class="answer">
                 Триг: \( \sqrt{2}(\cos(-\frac{\pi}{3}) + i\sin(-\frac{\pi}{3})) \)<br>
@@ -177,29 +230,33 @@
         </div>
 
         <div class="task-block">
-            <span class="task-title">2.3. Розв'язати рівняння</span>
+            <div class="task-header">Завдання 2.3. Розв'язати рівняння</div>
             <p>\( 3x^2 + 2x + 27 = 0 \)</p>
             <p>\( D = 4 - 324 = -320 = (8i\sqrt{5})^2 \)</p>
             <div class="answer">Відповідь: \( x = -\frac{1}{3} \pm i\frac{4\sqrt{5}}{3} \)</div>
         </div>
 
         <div class="task-block">
-            <span class="task-title">2.4. Дії в показниковій формі</span>
+            <div class="task-header">Завдання 2.4. Дії в показниковій формі</div>
             <p>\( \frac{-1+i}{\sqrt{2}e^{i\pi/3}} = \frac{\sqrt{2}e^{i3\pi/4}}{\sqrt{2}e^{i\pi/3}} \)</p>
             <div class="answer">Відповідь: \( e^{i\frac{5\pi}{12}} \)</div>
         </div>
 
         <div class="task-block">
-            <span class="task-title">2.5. Корені 5-го степеня</span>
-            <p>\( \sqrt[5]{-1+i} \). Модуль: \( \sqrt[10]{2} \). Кут: \( \frac{3\pi}{4} \).</p>
+            <div class="task-header">Завдання 2.5. Корені 5-го степеня</div>
+            <p>Знайти \( \sqrt[5]{-1+i} \). Модуль \( \sqrt{2} \). Кут \( \frac{3\pi}{4} \).</p>
+            <p>Модуль кореня: \( \sqrt[10]{2} \). Крок кута: \( \frac{2\pi}{5} = \frac{8\pi}{20} \).</p>
             <div class="answer">
-                Аргументи коренів (\( k=0..4 \)):
-                \( \frac{3\pi}{20}, \frac{11\pi}{20}, \frac{19\pi}{20}, \frac{27\pi}{20}, \frac{35\pi}{20} \)
+                \( z_0: \varphi = \frac{3\pi}{20} \)<br>
+                \( z_1: \varphi = \frac{11\pi}{20} \)<br>
+                \( z_2: \varphi = \frac{19\pi}{20} \)<br>
+                \( z_3: \varphi = \frac{27\pi}{20} \)<br>
+                \( z_4: \varphi = \frac{35\pi}{20} \)
             </div>
         </div>
         
         <div class="task-block">
-            <span class="task-title">2.6. Спростити</span>
+            <div class="task-header">Завдання 2.6. Спростити</div>
             <p>\( \frac{(\cos\frac{\pi}{3} - i\sin\frac{\pi}{3})(\sqrt{3}+i)}{2e^{i\pi/6}} = \frac{e^{-i\pi/3} \cdot 2e^{i\pi/6}}{2e^{i\pi/6}} \)</p>
             <div class="answer">Відповідь: \( e^{-i\frac{\pi}{3}} \)</div>
         </div>
@@ -212,12 +269,16 @@
         tabcontent = document.getElementsByClassName("tab-content");
         for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].classList.remove("active");
+            tabcontent[i].style.display = "none";
         }
         tablinks = document.getElementsByClassName("tab-btn");
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].classList.remove("active");
         }
-        document.getElementById(tabName).classList.add("active");
+        document.getElementById(tabName).style.display = "block";
+        setTimeout(() => {
+            document.getElementById(tabName).classList.add("active");
+        }, 10);
         evt.currentTarget.classList.add("active");
     }
 </script>
